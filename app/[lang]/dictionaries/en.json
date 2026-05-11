@@ -1,0 +1,101 @@
+{
+  "brand": {
+    "name": "Marie Koffi Confection",
+    "tagline": "Couture House",
+    "subtitle": "Made-to-measure & Ready-to-wear"
+  },
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About",
+    "journey": "Journey",
+    "contact": "Contact"
+  },
+  "journey": {
+    "title": "Journey",
+    "eyebrow": "Story · Marie Koffi",
+    "lead": "From law to fashion. From a literary baccalaureate in Yamoussoukro to a couture house celebrated for its boldness. An uncommon path — that of a woman who refuses to be boxed in.",
+    "chapter_1_label": "Chapter I · Origins",
+    "chapter_1_title": "Yamoussoukro, Literary Baccalaureate",
+    "chapter_1_text": "It all begins in Yamoussoukro. A brilliant literary track student, she earns her BAC A. Already the writing, already the word, already this urge to tell — through words or through fabric.",
+    "chapter_2_label": "Chapter II · The black robe",
+    "chapter_2_title": "Master's in Law · Path to magistracy",
+    "chapter_2_text": "Heading toward law. Master's degree in hand, she steps onto the demanding path to the bench. Discipline, rigor, critical thinking — another kind of couture, the couture of files.",
+    "chapter_3_label": "Chapter III · Under the spotlight",
+    "chapter_3_title": "Model & runway",
+    "chapter_3_text": "The runway calls. Model and figure, she learns the light, the gesture, the silhouette — everything her dresses will one day say. Fashion is no longer a hobby, it's a language.",
+    "chapter_4_label": "Chapter IV · The hand that creates",
+    "chapter_4_title": "Marie Koffi Confection",
+    "chapter_4_text": "The designer takes over. She founds Marie Koffi Confection — a house where African heritage meets contemporary cuts. Every piece, handmade, tells a woman's story.",
+    "chapter_5_label": "Chapter V · The crowning",
+    "chapter_5_title": "Winner · 2026 Competition",
+    "chapter_5_text": "Recently crowned — a victory that seals this remarkable path. Recognition of a vision: that of a designer who dares everything, and does it with elegance.",
+    "quote": "You don't leave the law. You dress it differently.",
+    "quote_author": "Marie Koffi",
+    "cta_eyebrow": "And you?",
+    "cta_title": "One piece, one story.",
+    "cta_lead": "Every creation is designed for the woman who will wear it. Let's tell yours.",
+    "cta_button": "Start the conversation"
+  },
+  "hero": {
+    "eyebrow": "Couture House · Côte d'Ivoire",
+    "title_1": "African",
+    "title_2": "elegance",
+    "title_3": "reimagined",
+    "lead": "Unique pieces, made-to-measure and ready-to-wear by Marie Koffi. Every creation is designed to celebrate the modern woman.",
+    "cta_primary": "Explore the gallery",
+    "cta_secondary": "Book a fitting"
+  },
+  "home": {
+    "featured_eyebrow": "Selection",
+    "featured_title": "Latest creations",
+    "featured_lead": "A glimpse of the collection. Over 80 designs to discover.",
+    "see_all": "View full gallery",
+    "about_eyebrow": "The house",
+    "about_title": "A vision, a craft",
+    "about_lead": "Marie Koffi creates clothing that blends African heritage with contemporary silhouettes. Each piece is handmade, with care and precision.",
+    "about_cta": "Learn more",
+    "cta_eyebrow": "Made-to-measure",
+    "cta_title": "A creation just for you",
+    "cta_lead": "Evening gown, traditional outfit, ready-to-wear set — let's talk about your project.",
+    "cta_button": "Get in touch"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "lead": "All Marie Koffi Confection creations. Click an image to enlarge."
+  },
+  "about": {
+    "title": "About",
+    "lead": "Marie Koffi is an Ivorian stylist and designer. Her couture house offers handmade pieces in the pure tradition of bespoke tailoring.",
+    "p1": "Founded with the will to celebrate modern African elegance, Marie Koffi Confection is more than a brand: it is a vision. A vision where wax fabric, traditional textiles, and contemporary cuts come together to create unique silhouettes.",
+    "p2": "Every creation is treated as an exceptional piece, handmade in our Abidjan workshops. Whether you are looking for a ceremony gown, a traditional outfit, or a ready-to-wear set, we design clothing that reflects who you are.",
+    "values_title": "Our values",
+    "value_1_title": "Bespoke",
+    "value_1_text": "Every piece is tailored to your body, your taste, and the occasion.",
+    "value_2_title": "Handmade",
+    "value_2_text": "Artisanal craftsmanship, selected fabrics, refined finishings.",
+    "value_3_title": "Heritage",
+    "value_3_text": "Inspired by the richness of West African textiles.",
+    "cta": "Discuss your project"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Book a fitting, request a quote, or simply come meet us.",
+    "whatsapp_label": "WhatsApp",
+    "whatsapp_value": "+225 07 57 59 58 49",
+    "email_label": "Email",
+    "email_value": "mkconfection@gmail.com",
+    "location_label": "Atelier",
+    "location_value": "Abidjan, Côte d'Ivoire",
+    "form_name": "Your name",
+    "form_email": "Your email",
+    "form_message": "Your message",
+    "form_submit": "Send",
+    "form_intro": "Or write to us directly",
+    "rights": "All rights reserved."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "made_with": "Made with passion in Abidjan."
+  }
+}

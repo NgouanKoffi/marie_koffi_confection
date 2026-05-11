@@ -1,0 +1,100 @@
+{
+  "brand": {
+    "name": "Marie Koffi Confection",
+    "tagline": "Maison de couture",
+    "subtitle": "Confection sur mesure & Prêt-à-porter"
+  },
+  "nav": {
+    "home": "Accueil",
+    "gallery": "Galerie",
+    "about": "À propos",
+    "journey": "Parcours",
+    "contact": "Contact"
+  },
+  "journey": {
+    "title": "Parcours",
+    "eyebrow": "Histoire · Marie Koffi",
+    "lead": "Du droit à la mode. D'un BAC littéraire à Yamoussoukro à une maison de couture saluée pour son audace. Un parcours hors normes — celui d'une femme qui refuse les cases.",
+    "chapter_1_label": "Chapitre I · Origines",
+    "chapter_1_title": "Yamoussoukro, Bac A",
+    "chapter_1_text": "Tout commence à Yamoussoukro. Lycéenne brillante en série littéraire, elle décroche son BAC A. Déjà l'écriture, déjà le verbe, déjà cette envie de raconter — par les mots ou par la matière.",
+    "chapter_2_label": "Chapitre II · La robe noire",
+    "chapter_2_title": "Master 2 · Droit, voie de la magistrature",
+    "chapter_2_text": "Cap sur le droit. Master 2 en poche, elle s'engage dans la voie exigeante qui mène à la magistrature. Discipline, rigueur, esprit critique — l'école d'une autre couture, celle des dossiers.",
+    "chapter_3_label": "Chapitre III · Sous les projecteurs",
+    "chapter_3_title": "Mannequin et modèle",
+    "chapter_3_text": "Le podium l'appelle. Mannequin, modèle, elle apprend la lumière, le geste, la silhouette — tout ce que les robes diront un jour. La mode n'est plus un loisir, c'est un langage.",
+    "chapter_4_label": "Chapitre IV · La main qui crée",
+    "chapter_4_title": "Marie Koffi Confection",
+    "chapter_4_text": "La styliste prend le dessus. Elle fonde Marie Koffi Confection — une maison où héritage africain et coupes contemporaines se rencontrent. Chaque pièce, faite main, raconte une femme.",
+    "chapter_5_label": "Chapitre V · La consécration",
+    "chapter_5_title": "Lauréate · Concours 2026",
+    "chapter_5_text": "Récemment couronnée — une victoire qui scelle ce parcours hors normes. La reconnaissance d'une vision : celle d'une créatrice qui ose tout, et le fait avec élégance.",
+    "quote": "On ne quitte pas le droit. On l'habille autrement.",
+    "quote_author": "Marie Koffi",
+    "cta_eyebrow": "Et vous ?",
+    "cta_title": "Une pièce, une histoire.",
+    "cta_lead": "Chaque création est pensée pour celle qui la portera. Racontons la vôtre.",
+    "cta_button": "Commencer le dialogue"
+  },
+  "hero": {
+    "eyebrow": "Maison de couture · Côte d'Ivoire",
+    "title_1": "L'élégance",
+    "title_2": "africaine",
+    "title_3": "réinventée",
+    "lead": "Pièces uniques, confection sur mesure et prêt-à-porter signés Marie Koffi. Chaque création est pensée pour célébrer la femme moderne.",
+    "cta_primary": "Découvrir la galerie",
+    "cta_secondary": "Prendre rendez-vous"
+  },
+  "home": {
+    "featured_eyebrow": "Sélection",
+    "featured_title": "Dernières créations",
+    "featured_lead": "Un aperçu de la collection. Plus de 80 modèles à découvrir.",
+    "see_all": "Voir toute la galerie",
+    "about_eyebrow": "La maison",
+    "about_title": "Une vision, un savoir-faire",
+    "about_lead": "Marie Koffi crée des vêtements qui marient héritage africain et silhouettes contemporaines. Chaque pièce est confectionnée à la main, avec soin et précision.",
+    "about_cta": "En savoir plus",
+    "cta_eyebrow": "Sur mesure",
+    "cta_title": "Une création rien que pour vous",
+    "cta_lead": "Robe de soirée, tenue traditionnelle, ensemble prêt-à-porter — discutons de votre projet.",
+    "cta_button": "Me contacter"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "lead": "Toutes les créations Marie Koffi Confection. Cliquez sur une image pour l'agrandir."
+  },
+  "about": {
+    "title": "À propos",
+    "lead": "Marie Koffi est styliste et créatrice ivoirienne. Sa maison de couture propose des pièces faites main, dans la pure tradition du sur-mesure.",
+    "p1": "Fondée avec la volonté de mettre en valeur l'élégance africaine moderne, Marie Koffi Confection est plus qu'une marque : c'est une vision. Une vision où le wax, les tissus traditionnels et les coupes contemporaines dialoguent pour créer des silhouettes uniques.",
+    "p2": "Chaque création est pensée comme une pièce d'exception, réalisée à la main dans nos ateliers d'Abidjan. Que vous cherchiez une robe de cérémonie, une tenue traditionnelle ou un ensemble prêt-à-porter, nous concevons des vêtements à votre image.",
+    "values_title": "Nos valeurs",
+    "value_1_title": "Sur mesure",
+    "value_1_text": "Chaque pièce est ajustée à votre morphologie, vos goûts et l'occasion.",
+    "value_2_title": "Fait main",
+    "value_2_text": "Confection artisanale, tissus sélectionnés, finitions soignées.",
+    "value_3_title": "Héritage",
+    "value_3_text": "Inspirations puisées dans la richesse des textiles ouest-africains.",
+    "cta": "Discuter de votre projet"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Prenez rendez-vous, demandez un devis, ou venez simplement nous rencontrer.",
+    "whatsapp_label": "WhatsApp",
+    "whatsapp_value": "+225 07 57 59 58 49",
+    "email_label": "Email",
+    "email_value": "mkconfection@gmail.com",
+    "location_label": "Atelier",
+    "location_value": "Abidjan, Côte d'Ivoire",
+    "form_name": "Votre nom",
+    "form_email": "Votre email",
+    "form_message": "Votre message",
+    "form_submit": "Envoyer",
+    "form_intro": "Ou écrivez-nous directement"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "made_with": "Confectionné avec passion à Abidjan."
+  }
+}
