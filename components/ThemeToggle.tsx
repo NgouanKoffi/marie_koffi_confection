@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -10,7 +11,7 @@ export default function ThemeToggle() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return <div className="w-14 h-7" aria-hidden="true" />;
+    return <div className="w-8 h-8" aria-hidden="true" />;
   }
 
   const isDark = theme === "dark";
@@ -19,22 +20,14 @@ export default function ThemeToggle() {
     <button
       aria-label="toggle theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative inline-flex items-center w-14 h-7 rounded-full border transition-colors duration-500"
+      className="w-8 h-8 rounded-full border flex items-center justify-center transition hover:opacity-80"
       style={{
         borderColor: "var(--line)",
-        backgroundColor: isDark ? "var(--paper)" : "var(--card)",
+        background: "var(--paper)",
+        color: "var(--fg)",
       }}
     >
-      <span
-        className="absolute top-0.5 left-0.5 w-6 h-6 rounded-full transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex items-center justify-center text-[10px]"
-        style={{
-          backgroundColor: "var(--fg)",
-          color: "var(--bg)",
-          transform: isDark ? "translateX(28px)" : "translateX(0)",
-        }}
-      >
-        {isDark ? "☾" : "☀"}
-      </span>
+      {isDark ? <Sun size={15} strokeWidth={1.7} /> : <Moon size={15} strokeWidth={1.7} />}
     </button>
   );
 }

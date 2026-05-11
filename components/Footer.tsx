@@ -64,51 +64,76 @@ export default function Footer({
 
         <div className="divider-line opacity-30 mb-12" />
 
-        <div className="text-center">
-          <div className="eyebrow text-[var(--dark-fg)]/50 mb-6">Contact</div>
-          <ul className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-x-10 gap-y-5 text-sm">
-            <li className="flex items-start gap-3">
-              <MessageCircle size={14} className="mt-1 text-[var(--dark-accent)]" />
-              <a
-                href="https://wa.me/2250757595849"
-                className="hover:text-[var(--dark-accent)] transition text-left"
-              >
-                <div className="font-mono text-[10px] tracking-widest text-[var(--dark-fg)]/50 mb-1">
-                  WhatsApp
-                </div>
-                07 57 59 58 49
-              </a>
-            </li>
-            <li className="flex items-start gap-3">
-              <Mail size={14} className="mt-1 text-[var(--dark-accent)]" />
-              <a
-                href="https://wa.me/2250757595849"
-                className="hover:text-[var(--dark-accent)] transition text-left"
-              >
-                <div className="font-mono text-[10px] tracking-widest text-[var(--dark-fg)]/50 mb-1">
-                  Email
-                </div>
-                mkconfection@gmail.com
-              </a>
-            </li>
-            <li className="flex items-start gap-3">
-              <MapPin size={14} className="mt-1 text-[var(--dark-accent)]" />
-              <div className="text-left">
-                <div className="font-mono text-[10px] tracking-widest text-[var(--dark-fg)]/50 mb-1">
-                  Atelier
-                </div>
-                Abidjan, Côte d&apos;Ivoire
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <InstagramIcon size={14} className="mt-1 text-[var(--dark-accent)]" />
-              <div className="text-left">
-                <div className="font-mono text-[10px] tracking-widest text-[var(--dark-fg)]/50 mb-1">
-                  Instagram
-                </div>
-                @mariekoffi
-              </div>
-            </li>
+        <div>
+          <div className="eyebrow text-[var(--dark-fg)]/50 mb-8 text-center">
+            Contact
+          </div>
+          <ul
+            className="grid grid-cols-2 md:grid-cols-4 gap-px"
+            style={{
+              background:
+                "color-mix(in srgb, var(--dark-fg) 12%, transparent)",
+            }}
+          >
+            {[
+              {
+                icon: MessageCircle,
+                label: "WhatsApp",
+                value: "07 57 59 58 49",
+                href: "https://wa.me/2250757595849",
+              },
+              {
+                icon: Mail,
+                label: "Email",
+                value: "mkconfection@gmail.com",
+                href: "mailto:mkconfection@gmail.com",
+              },
+              {
+                icon: MapPin,
+                label: "Atelier",
+                value: "Abidjan, Côte d'Ivoire",
+              },
+              {
+                icon: InstagramIcon,
+                label: "Instagram",
+                value: "@mariekoffi",
+                href: "https://instagram.com/mariekoffi",
+              },
+            ].map(({ icon: Icon, label, value, href }) => {
+              const inner = (
+                <>
+                  <Icon size={18} className="text-[var(--dark-accent)]" />
+                  <div className="font-mono text-[10px] tracking-widest text-[var(--dark-fg)]/50 mt-4 mb-2">
+                    {label}
+                  </div>
+                  <div className="text-[12px] sm:text-sm break-all leading-snug w-full">
+                    {value}
+                  </div>
+                </>
+              );
+              const cls =
+                "flex flex-col items-center text-center px-3 sm:px-4 py-6 transition w-full min-w-0 overflow-hidden";
+              return (
+                <li
+                  key={label}
+                  className="min-w-0 overflow-hidden"
+                  style={{ background: "var(--dark-bg)" }}
+                >
+                  {href ? (
+                    <a
+                      href={href}
+                      target={href.startsWith("http") ? "_blank" : undefined}
+                      rel={href.startsWith("http") ? "noreferrer" : undefined}
+                      className={`${cls} hover:text-[var(--dark-accent)]`}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <div className={cls}>{inner}</div>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
 

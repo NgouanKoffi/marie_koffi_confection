@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { MapPin, Mail, MessageCircle } from "lucide-react";
 import { getDictionary, hasLocale } from "../dictionaries";
 import ContactForm from "@/components/ContactForm";
+import PageHeader from "@/components/PageHeader";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/contact">) {
   const { lang } = await params;
@@ -46,41 +47,27 @@ export default async function ContactPage({
 
   return (
     <>
-      <section className="relative pt-28 md:pt-32 pb-10">
-        <div className="mx-auto max-w-[1500px] px-6 sm:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-5 border-b" style={{ borderColor: "var(--line)" }}>
-            <div className="flex items-center gap-4">
-              <span className="font-mono text-[10px] tracking-widest text-[var(--muted)]">
-                DIALOGUE · 01
-              </span>
-              <span className="h-px w-10 bg-fg" />
-              <span className="eyebrow">{dict.brand.tagline}</span>
-            </div>
-            <h1 className="font-display font-light text-[2.6rem] md:text-[4.5rem] leading-[0.95] tracking-tight">
-              {dict.contact.title}
-              <span className="italic text-[var(--accent)]">.</span>
-            </h1>
-          </div>
-          <p className="mt-5 max-w-xl text-[14px] leading-relaxed text-[var(--muted)]">
-            {dict.contact.lead}
-          </p>
-        </div>
-      </section>
+      <PageHeader
+        category={dict.brand.tagline}
+        title={dict.contact.title}
+        lead={dict.contact.lead}
+        watermark="✉"
+      />
 
       <section className="mx-auto max-w-[1500px] px-6 sm:px-10 pb-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         <div className="lg:col-span-5 flex flex-col gap-px bg-[var(--line)] self-start">
           {items.map((it) => {
             const inner = (
-              <div className="bg-[var(--bg)] p-7 flex items-start gap-6 group hover:bg-[var(--paper)] transition">
-                <div className="font-display italic text-5xl font-light text-[var(--accent)] leading-none w-12 shrink-0">
+              <div className="bg-[var(--bg)] p-5 sm:p-7 flex items-start gap-4 sm:gap-6 group hover:bg-[var(--paper)] transition min-w-0">
+                <div className="font-display italic text-4xl sm:text-5xl font-light text-[var(--accent)] leading-none w-9 sm:w-12 shrink-0">
                   {it.n}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 eyebrow text-[var(--muted)]">
                     <it.icon size={11} />
                     {it.label}
                   </div>
-                  <div className="mt-3 font-display text-2xl md:text-3xl font-light tracking-tight">
+                  <div className="mt-3 font-display text-lg sm:text-2xl md:text-3xl font-light tracking-tight break-words">
                     {it.value}
                   </div>
                   <div className="mt-2 font-mono text-[10px] tracking-widest text-[var(--muted)]">
@@ -100,9 +87,6 @@ export default async function ContactPage({
         </div>
 
         <div className="lg:col-span-7">
-          <div className="font-mono text-[10px] tracking-widest text-[var(--muted)] mb-6">
-            FORMULAIRE · 02
-          </div>
           <h2 className="font-display font-light text-[2rem] md:text-[3.2rem] leading-[1] tracking-tight mb-10">
             {dict.contact.form_intro}
             <span className="italic text-[var(--accent)]">.</span>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { getDictionary, hasLocale } from "../dictionaries";
+import PageHeader from "@/components/PageHeader";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/about">) {
   const { lang } = await params;
@@ -26,23 +27,11 @@ export default async function AboutPage({
 
   return (
     <>
-      <section className="relative pt-28 md:pt-32 pb-10 md:pb-14">
-        <div className="mx-auto max-w-[1500px] px-6 sm:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-5 border-b" style={{ borderColor: "var(--line)" }}>
-            <div className="flex items-center gap-4">
-              <span className="font-mono text-[10px] tracking-widest text-[var(--muted)]">
-                DOSSIER · 01
-              </span>
-              <span className="h-px w-10 bg-fg" />
-              <span className="eyebrow">{dict.brand.tagline}</span>
-            </div>
-            <h1 className="font-display font-light text-[2.6rem] md:text-[4.5rem] leading-[0.95] tracking-tight">
-              {dict.about.title}
-              <span className="italic text-[var(--accent)]">.</span>
-            </h1>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        category={dict.brand.tagline}
+        title={dict.about.title}
+        watermark="01"
+      />
 
       <section className="mx-auto max-w-[1500px] px-6 sm:px-10 pb-16 md:pb-24 grid md:grid-cols-12 gap-8 md:gap-12 items-center">
         <div className="md:col-span-4">
@@ -91,9 +80,6 @@ export default async function AboutPage({
             style={{ borderColor: "color-mix(in srgb, var(--dark-fg) 20%, transparent)" }}
           >
             <div className="flex items-center gap-4">
-              <span className="font-mono text-[10px] tracking-widest" style={{ color: "color-mix(in srgb, var(--dark-fg) 60%, transparent)" }}>
-                DOSSIER · 02
-              </span>
               <span className="h-px w-10" style={{ background: "var(--dark-fg)" }} />
               <span className="eyebrow" style={{ color: "color-mix(in srgb, var(--dark-fg) 70%, transparent)" }}>Valeurs</span>
             </div>

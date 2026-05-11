@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { Locale, Dictionary } from "@/app/[lang]/dictionaries";
-import { FadeUp, ClipReveal, SplitText } from "./Reveal";
+import { FadeUp, SplitText } from "./Reveal";
 
 const journey = [
   { year: "I", labelFr: "Origine", labelEn: "Origin", textFr: "Abidjan, héritage textile.", textEn: "Abidjan, textile heritage." },
@@ -111,9 +111,9 @@ export default function AboutTeaser({
             </Link>
           </FadeUp>
 
-          <div className="md:col-span-7 grid grid-cols-2 gap-3 min-h-[280px] md:min-h-[340px]">
-            <ClipReveal direction="bottom" delay={0.1} className="relative">
-              <div className="relative w-full h-full overflow-hidden hover-zoom">
+          <div className="md:col-span-7 grid grid-cols-2 gap-3">
+            <FadeUp delay={0.1}>
+              <div className="relative aspect-[3/4] w-full overflow-hidden hover-zoom">
                 <Image
                   src="/gallery/look-22.jpeg"
                   alt="Atelier"
@@ -125,9 +125,9 @@ export default function AboutTeaser({
                   ATELIER
                 </div>
               </div>
-            </ClipReveal>
-            <ClipReveal direction="bottom" delay={0.2} className="relative">
-              <div className="relative w-full h-full overflow-hidden hover-zoom">
+            </FadeUp>
+            <FadeUp delay={0.2}>
+              <div className="relative aspect-[3/4] w-full overflow-hidden hover-zoom">
                 <Image
                   src="/gallery/look-45.jpeg"
                   alt="Création"
@@ -139,7 +139,7 @@ export default function AboutTeaser({
                   CRÉATION
                 </div>
               </div>
-            </ClipReveal>
+            </FadeUp>
           </div>
         </div>
 

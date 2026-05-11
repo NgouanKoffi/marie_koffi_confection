@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SmartImage from "./SmartImage";
 import { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -53,13 +53,14 @@ export default function GalleryMasonry() {
             onClick={() => setActive(idx)}
             className="relative w-full block overflow-hidden group hover-zoom"
           >
-            <Image
+            <SmartImage
               src={img.src}
               alt={img.alt}
               width={800}
               height={1000}
               sizes="(min-width: 1280px) 22vw, (min-width: 1024px) 30vw, (min-width: 640px) 48vw, 95vw"
               className="w-full h-auto object-cover"
+              loading={idx < 6 ? "eager" : "lazy"}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
             <div className="absolute top-3 left-3 font-mono text-[10px] tracking-widest text-white/90 opacity-0 group-hover:opacity-100 transition duration-500">
@@ -82,11 +83,14 @@ export default function GalleryMasonry() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[100] bg-[var(--fg)]/97 backdrop-blur-2xl"
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-2xl"
             onClick={close}
           >
-            <div className="absolute top-0 inset-x-0 z-10 px-6 sm:px-10 py-5 flex items-center justify-between text-[var(--cream)]">
-              <span className="font-mono text-[10px] tracking-widest">
+            <div
+              className="absolute top-0 inset-x-0 z-30 px-4 sm:px-10 py-4 flex items-center justify-between text-white gap-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className="font-mono text-[10px] tracking-widest hidden sm:inline">
                 MARIE KOFFI CONFECTION · LOOKBOOK
               </span>
               <span className="font-mono text-[10px] tracking-widest">
@@ -97,9 +101,29 @@ export default function GalleryMasonry() {
                 aria-label="close"
                 className="p-2 hover:rotate-90 transition duration-500"
               >
-                <X size={20} />
+                <X size={22} />
               </button>
             </div>
+
+            <motion.div
+              key={active}
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              className="absolute inset-0 pt-14 pb-20 px-2 sm:px-16"
+            >
+              <SmartImage
+                wrapperClassName="w-full h-full"
+                src={galleryImages[active].src}
+                alt={galleryImages[active].alt}
+                fill
+                sizes="100vw"
+                className="object-contain"
+                priority
+              />
+            </motion.div>
 
             <button
               onClick={(e) => {
@@ -107,9 +131,9 @@ export default function GalleryMasonry() {
                 prev();
               }}
               aria-label="prev"
-              className="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 text-[var(--cream)] hover:text-[var(--accent-soft)] transition"
+              className="absolute z-40 left-2 sm:left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/15 hover:bg-white/30 text-white transition backdrop-blur-md"
             >
-              <ChevronLeft size={32} strokeWidth={1.5} />
+              <ChevronLeft size={28} strokeWidth={1.5} />
             </button>
             <button
               onClick={(e) => {
@@ -117,34 +141,15 @@ export default function GalleryMasonry() {
                 next();
               }}
               aria-label="next"
-              className="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 text-[var(--cream)] hover:text-[var(--accent-soft)] transition"
+              className="absolute z-40 right-2 sm:right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/15 hover:bg-white/30 text-white transition backdrop-blur-md"
             >
-              <ChevronRight size={32} strokeWidth={1.5} />
+              <ChevronRight size={28} strokeWidth={1.5} />
             </button>
 
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              onClick={(e) => e.stopPropagation()}
-              className="absolute inset-0 flex items-center justify-center px-12 sm:px-20 py-20"
+            <div
+              className="absolute bottom-4 inset-x-0 z-30 text-center text-white/80 pointer-events-none"
             >
-              <div className="relative w-full max-w-5xl h-full">
-                <Image
-                  src={galleryImages[active].src}
-                  alt={galleryImages[active].alt}
-                  fill
-                  sizes="100vw"
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </motion.div>
-
-            <div className="absolute bottom-6 inset-x-0 text-center text-[var(--cream)]/70">
-              <span className="font-display italic text-2xl">
+              <span className="font-display italic text-xl sm:text-2xl">
                 Look n°{String(active + 1).padStart(2, "0")}
               </span>
             </div>

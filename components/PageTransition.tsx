@@ -14,7 +14,7 @@ export default function PageTransition({ children }: { children: ReactNode }) {
         initial={{ scaleY: 1, originY: 1 }}
         animate={{ scaleY: 0, originY: 1 }}
         transition={{
-          duration: 0.7,
+          duration: 0.35,
           ease: [0.76, 0, 0.24, 1],
         }}
         className="fixed inset-0 z-[90] pointer-events-none"
@@ -22,9 +22,9 @@ export default function PageTransition({ children }: { children: ReactNode }) {
       />
       <motion.div
         key={`content-${pathname}`}
-        initial={{ opacity: 0, y: 12 }}
+        initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.4 }}
+        transition={{ duration: 0.3, delay: 0.15 }}
       >
         {children}
       </motion.div>

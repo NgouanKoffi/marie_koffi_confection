@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default async function RootLayout({
           <Navbar lang={lang} dict={dict} />
           <main className="flex-1">{children}</main>
           <Footer lang={lang} dict={dict} />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

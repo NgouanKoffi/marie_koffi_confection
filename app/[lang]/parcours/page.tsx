@@ -182,10 +182,7 @@ export default async function ParcoursPage({
         />
 
         <div className="mx-auto max-w-[1500px] px-6 sm:px-10 grid grid-cols-12 gap-6 lg:gap-10 items-center">
-          <aside className="hidden lg:flex col-span-1 flex-col justify-between h-full py-4 pointer-events-none">
-            <div className="vertical-label text-[var(--muted)]">
-              DOSSIER · MARIE KOFFI
-            </div>
+          <aside className="hidden lg:flex col-span-1 flex-col justify-end h-full py-4 pointer-events-none">
             <div className="vertical-label text-[var(--muted)] flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] pulse-dot" />
               EST · YAMOUSSOUKRO

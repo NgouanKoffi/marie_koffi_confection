@@ -63,20 +63,20 @@ export default function Navbar({ lang, dict }: Props) {
           borderColor: scrolled ? "var(--line-soft)" : "transparent",
         }}
       >
-        <div className="mx-auto max-w-[1500px] px-6 sm:px-10 h-20 flex items-center justify-between gap-4">
+        <div className="mx-auto max-w-[1500px] px-3 sm:px-6 lg:px-10 h-14 flex items-center justify-between gap-2 sm:gap-4">
           <Link
             href={`/${lang}`}
             className="flex items-center gap-3 group min-w-0"
           >
             <div
-              className="w-11 h-11 shrink-0 rounded-full overflow-hidden ring-1 transition"
+              className="w-9 h-9 shrink-0 rounded-full overflow-hidden ring-1 transition"
               style={{ borderColor: "var(--line)" }}
             >
               <Image
                 src="/logo.jpeg"
                 alt="MKC"
-                width={88}
-                height={88}
+                width={72}
+                height={72}
                 className="object-cover"
               />
             </div>
@@ -86,9 +86,12 @@ export default function Navbar({ lang, dict }: Props) {
               </div>
               <div className="eyebrow text-muted mt-1">Confection</div>
             </div>
+            <div className="hidden min-[360px]:block xl:hidden font-display text-lg font-medium tracking-[0.18em] leading-none">
+              MK<span className="italic text-[var(--accent)]">C</span>
+            </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-10">
             {links.map((l, i) => {
               const active = isActive(pathname, l.href, lang);
               return (
@@ -129,33 +132,27 @@ export default function Navbar({ lang, dict }: Props) {
             })}
           </nav>
 
-          <div className="flex items-center gap-4">
-            <div className="hidden lg:flex items-center gap-4">
-              <LanguageSwitcher current={lang} />
-              <div
-                className="h-5 w-px"
-                style={{ background: "var(--line)" }}
-              />
-              <ThemeToggle />
-              <a
-                href="https://wa.me/2250757595849"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center px-5 py-2.5 text-[10px] uppercase tracking-[0.22em] font-semibold rounded-full transition"
-                style={{
-                  backgroundColor: "var(--fg)",
-                  color: "var(--bg)",
-                }}
-              >
-                {lang === "fr" ? "Rendez-vous" : "Booking"}
-              </a>
-            </div>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <LanguageSwitcher current={lang} />
+            <ThemeToggle />
+            <a
+              href="https://wa.me/2250757595849"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden lg:inline-flex items-center px-4 py-2 text-[10px] uppercase tracking-[0.22em] font-semibold rounded-full transition"
+              style={{
+                backgroundColor: "var(--fg)",
+                color: "var(--bg)",
+              }}
+            >
+              {lang === "fr" ? "Rendez-vous" : "Booking"}
+            </a>
             <button
               aria-label="menu"
               onClick={() => setOpen(true)}
-              className="lg:hidden p-2 -mr-2"
+              className="md:hidden p-1.5 -mr-1.5"
             >
-              <Menu size={22} />
+              <Menu size={20} />
             </button>
           </div>
         </div>
@@ -170,21 +167,21 @@ export default function Navbar({ lang, dict }: Props) {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={() => setOpen(false)}
-              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm md:hidden"
             />
             <motion.aside
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed top-0 right-0 bottom-0 z-[70] w-[85%] max-w-sm flex flex-col lg:hidden"
+              className="fixed top-0 right-0 bottom-0 z-[70] w-[85%] max-w-sm flex flex-col md:hidden"
               style={{
                 background: "var(--bg)",
                 borderLeft: "1px solid var(--line-soft)",
               }}
             >
               <div
-                className="flex items-center justify-between px-6 h-20 border-b"
+                className="flex items-center justify-between px-6 h-14 border-b"
                 style={{ borderColor: "var(--line-soft)" }}
               >
                 <div className="flex items-center gap-3">
@@ -257,10 +254,6 @@ export default function Navbar({ lang, dict }: Props) {
                 className="px-6 py-6 border-t flex flex-col gap-5"
                 style={{ borderColor: "var(--line-soft)" }}
               >
-                <div className="flex items-center justify-between">
-                  <LanguageSwitcher current={lang} />
-                  <ThemeToggle />
-                </div>
                 <a
                   href="https://wa.me/2250757595849"
                   target="_blank"
