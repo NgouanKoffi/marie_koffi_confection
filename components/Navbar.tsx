@@ -86,7 +86,7 @@ export default function Navbar({ lang, dict }: Props) {
               </div>
               <div className="eyebrow text-muted mt-1">Confection</div>
             </div>
-            <div className="hidden min-[360px]:block xl:hidden font-display text-lg font-medium tracking-[0.18em] leading-none">
+            <div className="xl:hidden font-display text-lg font-medium tracking-[0.18em] leading-none">
               MK<span className="italic text-[var(--accent)]">C</span>
             </div>
           </Link>
@@ -133,8 +133,10 @@ export default function Navbar({ lang, dict }: Props) {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-4">
-            <LanguageSwitcher current={lang} />
-            <ThemeToggle />
+            <div className="hidden min-[230px]:flex items-center gap-2 sm:gap-4">
+              <LanguageSwitcher current={lang} />
+              <ThemeToggle />
+            </div>
             <a
               href="https://wa.me/2250757595849"
               target="_blank"
@@ -254,6 +256,10 @@ export default function Navbar({ lang, dict }: Props) {
                 className="px-6 py-6 border-t flex flex-col gap-5"
                 style={{ borderColor: "var(--line-soft)" }}
               >
+                <div className="min-[230px]:hidden flex items-center justify-between">
+                  <LanguageSwitcher current={lang} />
+                  <ThemeToggle />
+                </div>
                 <a
                   href="https://wa.me/2250757595849"
                   target="_blank"
