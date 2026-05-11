@@ -80,11 +80,13 @@ export default function Navbar({ lang, dict }: Props) {
                 className="object-cover"
               />
             </div>
-            <div className="hidden xl:block leading-none">
-              <div className="font-display text-[1.4rem] font-medium tracking-tight whitespace-nowrap">
+            <div className="hidden xl:block leading-[1.05] whitespace-nowrap">
+              <div className="font-display text-[1.05rem] font-semibold tracking-[0.28em] uppercase">
                 Marie Koffi
               </div>
-              <div className="eyebrow text-muted mt-1">Confection</div>
+              <div className="font-mono text-[9px] tracking-[0.45em] uppercase text-[var(--muted)] mt-1.5">
+                Confection
+              </div>
             </div>
             <div className="xl:hidden font-display text-lg font-medium tracking-[0.18em] leading-none">
               MK<span className="italic text-[var(--accent)]">C</span>
@@ -199,8 +201,8 @@ export default function Navbar({ lang, dict }: Props) {
                       className="object-cover"
                     />
                   </div>
-                  <div className="font-display text-base font-medium">
-                    Marie Koffi
+                  <div className="font-display text-lg font-medium tracking-[0.18em] leading-none">
+                    MK<span className="italic text-[var(--accent)]">C</span>
                   </div>
                 </div>
                 <button
