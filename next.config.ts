@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_BUNNY_CDN_HOST || "mkc-cdn.b-cdn.net",
+        hostname: "**.b-cdn.net",
       },
     ],
   },
