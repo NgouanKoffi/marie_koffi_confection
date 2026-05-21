@@ -6,10 +6,53 @@
   },
   "nav": {
     "home": "Home",
+    "shop": "Shop",
     "gallery": "Gallery",
     "about": "About",
     "journey": "Journey",
     "contact": "Contact"
+  },
+  "shop": {
+    "title": "Shop",
+    "lead": "Pieces from the Marie Koffi house. Made-to-measure, ready-to-wear, bridal. Click any creation to explore it.",
+    "filter_all": "All",
+    "filters_title": "Filters",
+    "filter_category": "Category",
+    "filter_price": "Price",
+    "filter_fabric": "Fabric",
+    "filter_only_featured": "Signature pieces only",
+    "filter_clear": "Reset",
+    "filter_apply": "Apply",
+    "filter_open": "Filter",
+    "filter_close": "Close",
+    "results_count_one": "piece",
+    "results_count_other": "pieces",
+    "sort_label": "Sort",
+    "sort_featured": "Featured",
+    "sort_price_asc": "Price low to high",
+    "sort_price_desc": "Price high to low",
+    "empty": "No pieces in this category.",
+    "back": "Back to shop",
+    "fabric_label": "Fabric",
+    "detail_label": "Detail",
+    "price_note": "Tax incl. · Shipping not included",
+    "order_note": "Personalised order — one fitting in Abidjan is included.",
+    "cta_whatsapp": "Order · WhatsApp",
+    "cta_email": "Send an email",
+    "related_title": "You may also like",
+    "see_all": "View shop",
+    "view_piece": "View piece",
+    "from": "From",
+    "featured_eyebrow": "Selection",
+    "featured_title": "Signature pieces",
+    "featured_lead": "A few of our creations to discover right now.",
+    "categories": {
+      "soiree": "Evening",
+      "traditionnel": "Traditional",
+      "ensemble": "Set",
+      "pret-a-porter": "Ready-to-wear",
+      "mariee": "Bridal"
+    }
   },
   "journey": {
     "title": "Journey",
@@ -43,7 +86,7 @@
     "title_2": "elegance",
     "title_3": "reimagined",
     "lead": "Unique pieces, made-to-measure and ready-to-wear by Marie Koffi. Every creation is designed to celebrate the modern woman.",
-    "cta_primary": "Explore the gallery",
+    "cta_primary": "Shop the collection",
     "cta_secondary": "Book a fitting"
   },
   "home": {
@@ -62,7 +105,7 @@
   },
   "gallery": {
     "title": "Gallery",
-    "lead": "All Marie Koffi Confection creations. Click an image to enlarge."
+    "lead": "Every Marie Koffi Confection creation, grouped by category. Click a piece to see its photo gallery, fabric and price."
   },
   "about": {
     "title": "About",

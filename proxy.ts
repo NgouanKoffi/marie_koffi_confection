@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { updateSession } from "@/lib/supabase/middleware";
 
 const locales = ["fr", "en"] as const;
 const defaultLocale = "fr";
@@ -13,8 +14,13 @@ function detectLocale(request: NextRequest): string {
   return preferred ?? defaultLocale;
 }
 
-export function proxy(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Admin: skip locale routing, handle Supabase auth
+  if (pathname.startsWith("/admin")) {
+    return updateSession(request);
+  }
 
   const hasLocale = locales.some(
     (loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)

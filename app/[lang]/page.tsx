@@ -5,14 +5,25 @@ import Marquee from "@/components/Marquee";
 import Editorial from "@/components/Editorial";
 import LookbookStrip from "@/components/LookbookStrip";
 import AboutTeaser from "@/components/AboutTeaser";
-import CtaBand from "@/components/CtaBand";
+import Team from "@/components/Team";
+import { getSiteSettings, getMarquee, getTeam, getProducts, getCategories, getEditorial, type SectionKey } from "@/lib/data";
 
 export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
 
-  const marqueeItems =
+  const [settings, marqueeDb, team, products, categories, editorial] = await Promise.all([
+    getSiteSettings(),
+    getMarquee(),
+    getTeam(),
+    getProducts(),
+    getCategories(),
+    getEditorial(),
+  ]);
+  const featured = products.filter((p) => p.featured);
+
+  const fallbackMarquee =
     lang === "fr"
       ? [
           "Maison de couture",
@@ -29,14 +40,28 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           "One-of-a-kind",
         ];
 
+  const marqueeItems = marqueeDb.length
+    ? marqueeDb.map((m) => (lang === "fr" ? m.label_fr : m.label_en) || m.label_fr)
+    : fallbackMarquee;
+
+  const renderers: Partial<Record<SectionKey, React.ReactNode>> = {
+    marquee:      <Marquee items={marqueeItems} />,
+    team:         team.length > 0 ? <Team lang={lang} members={team} /> : null,
+    editorial:    editorial.length > 0 ? <Editorial lang={lang} dict={dict} looks={editorial} /> : null,
+    lookbook:     featured.length > 0 ? <LookbookStrip lang={lang} dict={dict} products={featured} categories={categories} /> : null,
+    about_teaser: <AboutTeaser lang={lang} dict={dict} />,
+  };
+
   return (
     <>
       <Hero lang={lang} dict={dict} />
-      <Marquee items={marqueeItems} />
-      <Editorial lang={lang} dict={dict} />
-      <LookbookStrip lang={lang} dict={dict} />
-      <AboutTeaser lang={lang} dict={dict} />
-      <CtaBand lang={lang} dict={dict} />
+      {settings.sections
+        .filter((s) => s.enabled)
+        .map((s) => {
+          const node = renderers[s.key];
+          if (!node) return null;
+          return <div key={s.key}>{node}</div>;
+        })}
     </>
   );
 }

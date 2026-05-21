@@ -96,7 +96,7 @@ export default function Hero({
               className="mt-7 flex flex-col items-center gap-5 lg:flex-row lg:gap-6"
             >
               <Link
-                href={`/${lang}/gallery`}
+                href={`/${lang}/boutique`}
                 className="group inline-flex items-center gap-3 pl-6 pr-2 py-2 rounded-full text-[11px] uppercase tracking-[0.22em] font-semibold transition"
                 style={{ background: "var(--fg)", color: "var(--bg)" }}
               >

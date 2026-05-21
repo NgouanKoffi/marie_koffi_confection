@@ -6,10 +6,53 @@
   },
   "nav": {
     "home": "Accueil",
+    "shop": "Boutique",
     "gallery": "Galerie",
     "about": "À propos",
     "journey": "Parcours",
     "contact": "Contact"
+  },
+  "shop": {
+    "title": "Boutique",
+    "lead": "Pièces de la maison Marie Koffi. Confection sur mesure, prêt-à-porter, mariée. Cliquez sur une création pour la découvrir.",
+    "filter_all": "Tout",
+    "filters_title": "Filtres",
+    "filter_category": "Catégorie",
+    "filter_price": "Prix",
+    "filter_fabric": "Tissu",
+    "filter_only_featured": "Pièces phares uniquement",
+    "filter_clear": "Réinitialiser",
+    "filter_apply": "Appliquer",
+    "filter_open": "Filtrer",
+    "filter_close": "Fermer",
+    "results_count_one": "pièce",
+    "results_count_other": "pièces",
+    "sort_label": "Trier",
+    "sort_featured": "Mises en avant",
+    "sort_price_asc": "Prix croissant",
+    "sort_price_desc": "Prix décroissant",
+    "empty": "Aucune pièce dans cette catégorie.",
+    "back": "Retour à la boutique",
+    "fabric_label": "Tissu",
+    "detail_label": "Détail",
+    "price_note": "TTC · Hors frais d'expédition",
+    "order_note": "Commande personnalisée — un essayage est inclus à Abidjan.",
+    "cta_whatsapp": "Commander · WhatsApp",
+    "cta_email": "Écrire un email",
+    "related_title": "Vous aimerez aussi",
+    "see_all": "Voir la boutique",
+    "view_piece": "Voir la pièce",
+    "from": "À partir de",
+    "featured_eyebrow": "Sélection",
+    "featured_title": "Pièces phares",
+    "featured_lead": "Quelques-unes de nos créations à découvrir dès maintenant.",
+    "categories": {
+      "soiree": "Soirée",
+      "traditionnel": "Traditionnel",
+      "ensemble": "Ensemble",
+      "pret-a-porter": "Prêt-à-porter",
+      "mariee": "Mariée"
+    }
   },
   "journey": {
     "title": "Parcours",
@@ -43,7 +86,7 @@
     "title_2": "africaine",
     "title_3": "réinventée",
     "lead": "Pièces uniques, confection sur mesure et prêt-à-porter signés Marie Koffi. Chaque création est pensée pour célébrer la femme moderne.",
-    "cta_primary": "Découvrir la galerie",
+    "cta_primary": "Voir la boutique",
     "cta_secondary": "Prendre rendez-vous"
   },
   "home": {
@@ -62,7 +105,7 @@
   },
   "gallery": {
     "title": "Galerie",
-    "lead": "Toutes les créations Marie Koffi Confection. Cliquez sur une image pour l'agrandir."
+    "lead": "Toutes les créations Marie Koffi Confection, regroupées par catégorie. Cliquez sur une pièce pour voir sa galerie photos, son tissu et son prix."
   },
   "about": {
     "title": "À propos",
