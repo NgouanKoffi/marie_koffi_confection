@@ -3,6 +3,7 @@
 import { useRef, useState, useTransition } from "react";
 import { Upload, X, Loader2 } from "lucide-react";
 import { uploadImageAction } from "../actions/upload";
+import { compressImage, MAX_UPLOAD_BYTES, tooHeavyMessage } from "./compressImage";
 
 export default function ImageUpload({
   name,
@@ -29,12 +30,21 @@ export default function ImageUpload({
     if (!file) return;
     setError(null);
     start(async () => {
-      const fd = new FormData();
-      fd.set("file", file);
-      fd.set("subfolder", subfolder);
-      const res = await uploadImageAction(fd);
-      if (res.error) setError(res.error);
-      else if (res.url) setUrl(res.url);
+      try {
+        const compressed = await compressImage(file);
+        if (compressed.size > MAX_UPLOAD_BYTES) {
+          setError(tooHeavyMessage(compressed.size));
+          return;
+        }
+        const fd = new FormData();
+        fd.set("file", compressed);
+        fd.set("subfolder", subfolder);
+        const res = await uploadImageAction(fd);
+        if (res.error) setError(res.error);
+        else if (res.url) setUrl(res.url);
+      } catch {
+        setError("Échec de l'envoi — l'image est probablement trop lourde. Réduisez son poids sur bulkresize.com, puis réessayez.");
+      }
     });
     e.target.value = "";
   };
